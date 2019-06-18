@@ -47,3 +47,9 @@ test('compose', () => {
     zoo: '1',
   })
 })
+
+// THIS SHOULD BREAK
+myFunctionWithDefaults({
+  bar: '1',
+  // zoo: 'missing',
+})
