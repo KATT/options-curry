@@ -2,7 +2,7 @@
 
 Curry a function's default options.
 
-Since working with TypeScript I've moved to mostly having functions that only accepts 1 options arguments as input arguments get named, order of args doesn't matter, and you can add new options without breaking the API.
+Since working with TypeScript I've moved to mostly having functions that only accepts 1 options argument as then the args get named, order of args doesn't matter, and you can add new options without breaking the API.
 
 Sometimes it's nice to compose a new function with default values set. This lib does that.
 
