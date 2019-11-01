@@ -35,6 +35,11 @@ jobs:
             chmod +x ./cc-test-reporter
 
       # run tests / build
-      - run: yarn test --collectCoverage
+      - run:
+          name: Run tests
+          command: |
+            ./cc-test-reporter before-build
+            yarn test --collectCoverage
+            ./cc-test-reporter after-build --exit-code $?
 
       - run: yarn build
