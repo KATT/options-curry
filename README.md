@@ -1,5 +1,4 @@
 [![CircleCI](https://circleci.com/gh/KATT/options-curry.svg?style=shield)](https://circleci.com/gh/KATT/options-curry) [![Maintainability](https://api.codeclimate.com/v1/badges/7fe8350eab922963ff12/maintainability)](https://codeclimate.com/github/KATT/options-curry/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/7fe8350eab922963ff12/test_coverage)](https://codeclimate.com/github/KATT/options-curry/test_coverage)
-[![Dependency Status](https://david-dm.org/KATT/options-curry.svg?theme=shields.io)](https://david-dm.org/KATT/options-curry) [![devDependency Status](https://david-dm.org/KATT/options-curry/dev-status.svg?theme=shields.io)](https://david-dm.org/KATT/options-curry#info=devDependencies)
 
 # TypeScript Options-object "Currying" <!-- omit in toc -->
 
