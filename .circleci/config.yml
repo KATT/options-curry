@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     environment:
-      CC_TEST_REPORTER_ID: cfada6b353b2c50360764882d0c1d4bf81c6d96502d8e2cba180c74891047f18
+      CC_TEST_REPORTER_ID: a425a55f9faf73395baf2ad5475496f755837a5a257096a0c6c866411e325760
     docker:
       - image: circleci/node:10.15.3
 
