@@ -1,0 +1,12 @@
+{
+  "name": "options-curry-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "options-curry": "^0.1.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.7.0-rc1"
+  }
+}
