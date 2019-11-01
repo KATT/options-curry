@@ -1,7 +1,7 @@
 {
   "name": "options-curry",
   "description": "TypeScript Options-object Currying",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "module": "dist/options-curry.esm.js",
   "typings": "dist/index.d.ts",
