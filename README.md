@@ -1,8 +1,42 @@
-# TSDX Bootstrap
+# TypeScript Options-object "Currying"
 
-This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
+Curry a function defaults that only accept 1 options object.
+
+## How to use
+
+```typescript
+import { withDefaults } from '../src/index';
+
+// Create function with an options object
+function myFunction({ foo, bar }: { foo: string; bar: string }) {
+  return { foo, bar };
+}
+
+// Compose new function where options are pre-set
+const myFunctionWithDefaults = withDefaults(myFunction, {
+  foo: 'foo',
+});
+
+// `foo`-key is now optional in `myFunctionWithDefaults`
+console.log(myFunctionWithDefaults({ bar: 'bar' })); // logs `{ foo: 'foo', bar: 'bar' }`
+console.log(myFunctionWithDefaults({ bar: 'bar', foo: 'x' })); // logs `{ foo: 'x', bar: 'bar' }`
+
+// ReturnType is typed
+const ret = myFunctionWithDefaults({ bar: 'x' });
+console.log(ret.nope); // ❌ Error: "Property 'nope' does not exist on type '{ foo: string; bar: string; }"
+
+myFunctionWithDefaults({
+  foo: 'x', // ❌ Error: "Property 'bar' is missing in type '{ foo: string; }' but required in [...]"
+});
+
+// We can compose a new function from our function with defaults
+const composedFn = withDefaults(myFunctionWithDefaults, { bar: 'bar' });
+console.log(composedFn({})); // logs `{ foo: 'foo', bar: 'bar' }`
+```
 
 ## Local Development
+
+_(This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).)_
 
 Below is a list of commands you will probably find useful.
 
