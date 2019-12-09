@@ -1,7 +1,12 @@
 import { withDefaults } from 'options-curry';
 
+interface Options {
+  foo: string;
+  bar: string;
+}
+
 // Create function with an options object
-function fn({ foo, bar }: { foo: string; bar: string }) {
+function fn({ foo, bar }: Options) {
   return { foo, bar };
 }
 

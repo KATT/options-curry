@@ -13,9 +13,9 @@ Sometimes it's nice to compose a new function with default values set. This lib 
     - [Happy path](#happy-path)
     - [Type safety showcase](#type-safety-showcase)
 - [Local Development](#local-development)
-  - [`yarn start`](#yarn-start)
-  - [`yarn build`](#yarn-build)
-  - [`yarn test`](#yarn-test)
+  - [yarn start](#yarn-start)
+  - [yarn build](#yarn-build)
+  - [yarn test](#yarn-test)
 
 ## How to use
 
@@ -34,8 +34,13 @@ yarn add options-curry
 ```typescript
 import { withDefaults } from 'options-curry';
 
+interface Options {
+  foo: string;
+  bar: string;
+}
+
 // Create function with an options object
-function fn({ foo, bar }: { foo: string; bar: string }) {
+function fn({ foo, bar }: Options) {
   return { foo, bar };
 }
 
@@ -58,8 +63,13 @@ console.log(composedFn({})); // ➡️ `{ foo: 'foo', bar: 'bar' }`
 ```typescript
 import { withDefaults } from 'options-curry';
 
+interface Options {
+  foo: string;
+  bar: string;
+}
+
 // Create function with an options object
-function fn({ foo, bar }: { foo: string; bar: string }) {
+function fn({ foo, bar }: Options) {
   return { foo, bar };
 }
 
